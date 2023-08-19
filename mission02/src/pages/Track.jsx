@@ -1,12 +1,12 @@
 import useDocumentTitle from "@/hooks/useDocumentTitle";
 
-function Products() {
+function Track() {
   useDocumentTitle('ON BOARDING TRACK')
   return (
     <div>
-      <h1 className="text-emerald-500">Products</h1>
+      <h1 className="text-emerald-500">Track</h1>
     </div>
   );
 }
 
-export default Products;
+export default Track;
