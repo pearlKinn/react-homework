@@ -5,6 +5,7 @@ function Home() {
   useDocumentTitle('TECHIT BY LIKELION');
   return (
     <div>
+      <img src="../../public/이듬배너.png" alt="" className='w-full h-auto'/>
       <Contents />
     </div>
   );
