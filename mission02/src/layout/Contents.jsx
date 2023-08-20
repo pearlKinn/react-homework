@@ -1,5 +1,6 @@
 import Spinner from '@/components/Spinner';
 import useFetchData from '@/hooks/useFetchData';
+import filterItemsByState from '@/utils/filterItemsByState';
 import BootCamp from '@/views/BootCamp';
 
 const PB_BOOTCAMP_ENDPOINT =
@@ -9,13 +10,6 @@ function Contents({ filterKeyWord = '' }) {
   const { error, data, isLoading } = useFetchData(PB_BOOTCAMP_ENDPOINT);
   let dataItems = data.items;
   let filteredData = null
-
-  const filterItemsByState = (items, status) => {
-    if (!status) return items;
-
-    return items?.filter((item) => item.state === status);
-  };
-
 
   if (data) {
     if (filterKeyWord.length === 0) {
